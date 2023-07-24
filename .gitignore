@@ -6,6 +6,7 @@ out/
 *.iml
 Test.java
 Test2.java
+Main.java
 ### Eclipse ###
 .apt_generated
 .classpath

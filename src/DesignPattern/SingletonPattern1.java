@@ -1,3 +1,5 @@
+package DesignPattern;
+
 class SimpleNumber1
 {
     private static SimpleNumber1 inst = new SimpleNumber1();
