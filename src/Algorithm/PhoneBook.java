@@ -35,10 +35,9 @@ class Manager{
             {
                 System.out.println(PhoneBookMain.arr[i].name + "을 삭제합니다.");
                 tmp = PhoneBookMain.arr[i];
-                PhoneBookMain.arr[i]= PhoneBookMain.arr[i+1];
                 PhoneBookMain.cnt--;
-
             }
+            PhoneBookMain.arr[i]= PhoneBookMain.arr[i+1];
         }
     }
 
