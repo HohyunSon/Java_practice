@@ -21,7 +21,8 @@ public class SelectionSort2 {
             tempi = i;
             for(int j=i+1;j<num.length;j++)
             {
-                if(num[i]>num[j]) i = j;
+                if(num[i]>num[j])
+                    i = j;
             }
             temp = num[tempi];
             num[tempi] = num[i];
