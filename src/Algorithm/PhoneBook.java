@@ -19,6 +19,9 @@ class Info{
     }
 }
 class Manager{
+
+    public void add(){
+    }
     public void search(String name){
         for(int i = 0; i< PhoneBookMain.cnt; i++)
         {
@@ -30,11 +33,10 @@ class Manager{
     public void delete(String name){
         for(int i = 0; i< PhoneBookMain.cnt; i++)
         {
-            Info tmp;
             if (name.equals(PhoneBookMain.arr[i].name))
             {
                 System.out.println(PhoneBookMain.arr[i].name + "을 삭제합니다.");
-                tmp = PhoneBookMain.arr[i];
+                PhoneBookMain.arr[i] = null ;
                 PhoneBookMain.cnt--;
             }
             PhoneBookMain.arr[i]= PhoneBookMain.arr[i+1];
@@ -69,8 +71,8 @@ class PhoneBookMain{
                     System.out.println("전화번호 : ");
                     String phoneNum = sc.nextLine();
                     System.out.println("생년월일 : ");
-                    String phone = sc.nextLine();
-                    arr[cnt++] = new Info(name,phoneNum,phone);
+                    String birth = sc.nextLine();
+                    arr[cnt++] = new Info(name,phoneNum,birth);
                     break;
                 case 2:
                     System.out.println("찾고싶은 이름을 입력하세요");
