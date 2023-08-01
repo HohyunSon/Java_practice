@@ -4,7 +4,6 @@ out/
 !**/src/test/**/out/
 *.idea
 *.iml
-/src/test
 Test.java
 Test2.java
 Main.java
