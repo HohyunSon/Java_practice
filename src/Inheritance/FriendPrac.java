@@ -47,7 +47,7 @@ abstract class Friend//추상클래스로 만들어준다.(객체 생성X)
         System.out.println("전화번호:" + phone);
         System.out.println("주소:"+adress);
     }
-    public void showBasicInfo(){}
+    public abstract void showBasicInfo();
 }
 class HighFriend extends Friend {
     private String comp;
@@ -55,12 +55,15 @@ class HighFriend extends Friend {
         super(name, phone, adress);
         this.comp = comp;
     }
+    @Override
     public void showData(){
         super.showData();
         System.out.println("직장:" + comp);
     }
+    @Override
     public void showBasicInfo(){
-        super.showBasicInfo();
+        System.out.println("이름:" + getName());
+        System.out.println("번호:" + getPhone());
         System.out.println("직장:" + comp);
     }
 }
@@ -70,13 +73,15 @@ class UnivFriend extends Friend {
         super(name, phone, adress);
         this.major = major;
     }
+    @Override
     public void showData(){
         super.showData();
         System.out.println("전공:" + major);
 
     }
+    @Override
     public void showBasicInfo(){
-        super.showBasicInfo();
+        System.out.println("이름:"+getName());
         System.out.println("전공:" + major);
     }
 }
