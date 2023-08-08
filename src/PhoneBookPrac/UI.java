@@ -2,7 +2,7 @@ package PhoneBookPrac;
 
 import java.util.Scanner;
 
-class UI{
+class UI implements finalNum{
     private static PhoneBook pb = PhoneBook.getPhoneBook(100);
     static Scanner sc = new Scanner(System.in);
     public static void showBase(){
@@ -53,8 +53,23 @@ class UI{
     public static void deleteByName(){
         System.out.println("데이터를 삭제할 이름을 입력하세요");
         String deleteName = sc.nextLine();
-        pb.deleteInfo(deleteName);
-        System.out.println("삭제가 완료되었습니다.");
+        deleteCheck();
+        int choose = sc.nextInt();
+        sc.nextLine();
+        if(choose==YES) {
+            pb.deleteInfo(deleteName);
+        }
+        else if(choose==NO)
+        {
+            System.out.println("삭제를 취소합니다.");
+        }
+        else
+        {
+            wrong();
+        }
+    }
+    public static void deleteCheck(){
+        System.out.println("정말 삭제하시겠습니까? 1. Yes 2. No");
     }
     public static void showAll(){
         pb.showAll();

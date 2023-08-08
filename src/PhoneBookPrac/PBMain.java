@@ -1,8 +1,23 @@
 package PhoneBookPrac;
 
 import java.util.Scanner;
+interface finalNum{
+    int INSERT_INFO = 1;
+    int SEARCH_INFO = 2;
+    int DELETE_INFO = 3;
+    int SHOW_ALL_INFO = 4;
+    int QUIT_PROGRAM = 5;
 
-class PBMain{
+    int CHOOSE_BASIC = 1;
+    int CHOOSE_UNIV = 2;
+    int CHOOSE_COMPANY = 3;
+
+    int YES = 1;
+    int NO = 2;
+}
+class PBMain implements finalNum{
+
+
     static int cnt = 0;
     public static void main(String[] args) {
         Scanner sc = UI.sc;
@@ -17,22 +32,22 @@ class PBMain{
             System.out.println();
 
             switch (menu) {
-                case 1:
+                case INSERT_INFO:
                     UI.chooseCase();
                     int choose = sc.nextInt();
                     sc.nextLine();
 
-                    if(choose == 1)
+                    if(choose == CHOOSE_BASIC)
                     {
                         UI.inputBasicInfo();
                         break;
                     }
-                    else if(choose == 2)
+                    else if(choose == CHOOSE_UNIV)
                     {
                         UI.inputUnivInfo();
                         break;
                     }
-                    else if(choose == 3)
+                    else if(choose == CHOOSE_COMPANY)
                     {
                         UI.inputCompInfo();
                         break;
@@ -42,16 +57,16 @@ class PBMain{
                         break;
                     }
 
-                case 2:
+                case SEARCH_INFO:
                     UI.searchByName();
                     break;
-                case 3:
+                case DELETE_INFO:
                     UI.deleteByName();
                     break;
-                case 4:
+                case SHOW_ALL_INFO:
                     UI.showAll();
                     break;
-                case 5:
+                case QUIT_PROGRAM:
                     UI.quitProgram();
                     return;
                 default:
