@@ -7,7 +7,7 @@
 
 2. 사용자로 부터 입력받은 정수를 int형 배열로 만드시오.
 */
-package Algorithm;
+package AlgorithmPrac;
 import java.util.*;
 
 class Test1{

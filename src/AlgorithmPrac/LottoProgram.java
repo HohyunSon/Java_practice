@@ -1,4 +1,4 @@
-package Algorithm;
+package AlgorithmPrac;
 
 //1~45 6개 로또생성기
 //1차원 배열 5세트

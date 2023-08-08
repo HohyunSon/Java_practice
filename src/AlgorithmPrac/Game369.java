@@ -1,4 +1,4 @@
-package Algorithm;
+package AlgorithmPrac;
 
 class Game369 {
     public static void main(String[] args) {
