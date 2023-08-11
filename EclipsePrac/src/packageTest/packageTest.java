@@ -1,7 +1,0 @@
-package packageTest;
-
-public class packageTest {
-	public static void main(String[] args) {
-		System.out.println("test");
-	}
-}
