@@ -1,4 +1,4 @@
-package test;
+package cloneEx1;
 
 public class Person implements Cloneable{
 	private String name;
