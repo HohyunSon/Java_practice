@@ -42,7 +42,7 @@ class Buyer {
 		for(int i=0;i<this.i;i++)
 			System.out.println(cart);
 			
-		for(int i=0;i<this.i;i++)
+		for(int i=0;i<cart.length;i++)
 			sum+=cart[i].price;
 		System.out.println(sum);
 		System.out.println(money);
