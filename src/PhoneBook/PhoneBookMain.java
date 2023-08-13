@@ -1,46 +1,45 @@
-package PhoneBookPrac6;
+package PhoneBook;
 
 import java.util.Scanner;
 
 public class PhoneBookMain implements FinalNum{
-
     public static void main(String[] args) {
         Scanner sc = PhoneBookUI.sc;
         while(true)
         {
-            PhoneBookUI.showBase();
-            int menu = sc.nextInt();
             try {
-                if(menu < FinalNum.INSERT_INFO || menu > FinalNum.QUIT_PROGRAM)
+                PhoneBookUI.showBase();
+                int menu = sc.nextInt();
+                if(menu < INSERT_INFO || menu > QUIT_PROGRAM)
                     throw new MenuException(menu);
-
                 sc.nextLine();
                 switch (menu) {
-
                     case INSERT_INFO:
-                        PhoneBookUI.choose();
-                        int choose = sc.nextInt();
+                        PhoneBookUI.choiceSelect();
+                        int select = sc.nextInt();
                         sc.nextLine();
-                        switch (choose) {
-                            case CHOOSE_GENERIC:
-                                PhoneBookUI.insertGeniricInfo();
+                        switch (select) {
+                            case SELECT_GENERIC:
+                                PhoneBookUI.insertGeneric();
                                 break;
-                            case CHOOSE_UNIV:
-                                PhoneBookUI.insertUnivInfo();
+                            case SELECT_UNIV:
+                                PhoneBookUI.insertUniv();
                                 break;
-                            case CHOOSE_COMPANY:
-                                PhoneBookUI.insertCompanyInfo();
+                            case SELECT_COMPANY:
+                                PhoneBookUI.insertCompany();
+                                break;
+                            default:
+                                PhoneBookUI.wrongNum();
                                 break;
                         }
                         break;
-
                     case SEARCH_INFO:
-                        PhoneBookUI.searchName();
+                        PhoneBookUI.searchInfo();
                         break;
                     case DELETE_INFO:
-                        PhoneBookUI.deletePhone();
+                        PhoneBookUI.deleteInfo();
                         break;
-                    case SHOW_INFO:
+                    case SHOW_ALL:
                         PhoneBookUI.showAll();
                         break;
                     case QUIT_PROGRAM:
@@ -49,12 +48,12 @@ public class PhoneBookMain implements FinalNum{
                     default:
                         PhoneBookUI.wrongNum();
                         break;
-
                 }
-            }catch(MenuException e){
+            }catch (MenuException e){
                 System.out.println(e.getMessage());
-                e.showWrongMenu();
+                e.wrong();
             }
+
         }
     }
 }

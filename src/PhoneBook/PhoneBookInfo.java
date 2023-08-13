@@ -1,4 +1,4 @@
-package PhoneBookPrac6;
+package PhoneBook;
 
 public class PhoneBookInfo {
     private String name;
@@ -8,16 +8,18 @@ public class PhoneBookInfo {
         this.name = name;
         this.phone = phone;
     }
+
     public String getName() {
         return name;
     }
+
     public String getPhone() {
         return phone;
     }
-    public void show(){
-        System.out.println("-----------");
+
+    public void showCurrentInfo(){
         System.out.println("이름 : "+name);
         System.out.println("번호 : "+phone);
-        System.out.println("-----------");
+        System.out.println();
     }
 }
