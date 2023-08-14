@@ -45,7 +45,10 @@ public class PhoneBookUI implements FinalNum {
     public static void searchInfo(){
         System.out.println("검색할 이름 입력");
         String name = sc.nextLine();
-        pb.searchInfo(name);
+        if(pb.searchInfo(name))
+            System.out.println("검색완료");
+        else
+            System.out.println("검색 결과 없음");
     }
     public static void deleteInfo(){
         System.out.println("삭제할 번호 입력");

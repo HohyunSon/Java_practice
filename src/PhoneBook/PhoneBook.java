@@ -29,13 +29,17 @@ public class PhoneBook {
         pInfoArr[i] = phoneBookInfo;
         pInfoNum++;
     }
-    public void searchInfo(String name){
+    public boolean searchInfo(String name){
+        boolean result =false;
         for(int i=0;i<pInfoNum;i++)
         {
-            if(pInfoArr[i].getName().equals(name))
+            if(pInfoArr[i].getName().equals(name)) {
                 pInfoArr[i].showCurrentInfo();
+                result = true;
+            }
+
         }
-        System.out.println("검색완료");
+        return result;
     }
     public boolean deleteInfo(String phone){
         boolean result = false;
