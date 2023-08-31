@@ -8,6 +8,7 @@ Test.java
 Test2.java
 Test3.java
 Main.java
+*.ser
 ### Eclipse ###
 .apt_generated
 .classpath
