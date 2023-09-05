@@ -1,4 +1,4 @@
-package LambdaTest;
+package LambdaAndFunction;
 
 import java.util.Random;
 import java.util.List;

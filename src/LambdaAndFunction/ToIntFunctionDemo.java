@@ -1,4 +1,4 @@
-package LambdaTest;
+package LambdaAndFunction;
 
 import java.util.function.ToIntFunction;
 

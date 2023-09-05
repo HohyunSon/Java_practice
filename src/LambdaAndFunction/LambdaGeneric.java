@@ -1,4 +1,4 @@
-package LambdaTest;
+package LambdaAndFunction;
 
 @FunctionalInterface
 interface Calculate <T> {
